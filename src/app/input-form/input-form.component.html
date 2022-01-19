@@ -1,0 +1,37 @@
+<h4>
+
+    <h1 class="logo">
+        Simulador de población de ballenas
+    </h1>
+
+
+
+
+
+    <div class="box4">
+        <div class="box1">
+            <div>
+                <p>Población inicial:</p>
+                <input type="number" required class="form-control" [(ngModel)]="whaleNumber">
+                <p>Tasa de Natalidad anual (n/1000):</p>
+                <input type="number" required class="form-control" [(ngModel)]="nat">
+                <p>Tasa de Mortalidad anual (n/1000):</p>
+                <input type="number" required class="form-control" [(ngModel)]="mort">
+                <p>Duración de la simulación</p>
+                <input type="number" required class="form-control" [(ngModel)]="nYears">
+                <div><button mat-raised-button (click)="onClick()">Run</button></div>
+            </div>
+            <div>
+                <app-chart></app-chart>
+            </div>
+        </div>
+        <div class="box3" *ngIf="sResultArr">
+            <div class="prefix">Nº final de ballenas: </div>
+            <div class="result">{{sResult}}</div>
+        </div>
+    </div>
+
+
+
+
+</h4>
